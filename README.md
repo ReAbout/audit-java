@@ -26,12 +26,14 @@
 
 ### 1. 注入漏洞
 
+
 - [命令注入&代码注入](./vul/rce.md)
 - [XML外部实体(XXE)注入](./vul/xxe.md)
 >高版本JDK对JNDI远程调用进行了限制
 - [JNDI注入](./base/jndi.md)
 - - [Apache Log4j 漏洞分析 （CVE-2021-45105）](./poc/CVE-2021-45105.md)
 - [模板注入(SSTI)](./vul/ssti.md)
+- [SQL注入](./vul/sql.md)
 
 #### 表达式注入
 >Java表达式语言包括:EL,SPEL,OGNL,MVEL,JBoss EL... 
@@ -75,13 +77,17 @@
 ## 0x03 自动化漏洞挖掘
 
 ### 静态分析
+>需要源码，对闭源jar不友好
 - [CodeQL for Java](./auto/codeql.md)
 >自动挖掘反序列化链
 - [[Tool] gadgetinspector](https://github.com/JackOfMostTrades/gadgetinspector)
 > threedr3am的改版增加了一些功能参数
 - [[Tool] threedr3am的改版gadgetinspector](https://github.com/threedr3am/gadgetinspector)
->静态分析框架
+>Tai-e静态分析框架，南京大学软件分析配套框架，有完整的教学和实验文档，很适合从头学习
 - [[Tool] Tai-e](https://github.com/pascal-lab/Tai-e)
+- [Tai-e主站，包括教学视频和文档](https://tai-e.pascal-lab.net/)
 >针对android java漏洞挖掘工具
 - [[Tool] mariana-trench
 ](https://github.com/facebook/mariana-trench)
+>TABBY使用静态分析框架 Soot 作为语义提取工具，将JAR/WAR/CLASS文件转化为代码属性图。 并使用 Neo4j 图数据库来存储生成的代码属性图CPG。
+- [[Tool] tabby](https://github.com/wh1t3p1g/tabby)
