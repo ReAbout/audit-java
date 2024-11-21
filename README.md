@@ -18,9 +18,15 @@
 - [注解机制](./base/annotation.md)
 >使用代理对象来代替对真实对象的访问，可以在不修改原目标对象的前提下，提供额外的功能操作，扩展目标对象的功能
 - [代理模式](./base/proxy.md)
->JNDI和RMI关系：简单的来说就是RMI注册的服务可以让JNDI应用程序来访问调用。
- - [JNDI](./base/jndi.md)
- - [RMI](./base/rmi.md)
+- [JNDI](./base/jndi.md)
+- - [RMI](./base/rmi.md)
+- - [LDAP](./base/ldap.md)
+- JavaBean
+>JavaBean 是一种遵循特定规范（如具有无参构造方法、可序列化、提供 getter 和 setter 方法）的 Java 类，通常用于封装数据和在不同组件间传递信息。
+- 工厂方法(Factory)
+>工厂模式是一种设计模式，提供了一种创建对象的方式，而无需指定要创建的具体类。
+- Reference类
+>Java中的Reference类是用于在垃圾回收机制中提供对对象的引用控制，它允许开发者通过软引用、弱引用、虚引用等方式管理对象的生命周期。JNDI注入中使用Reference类构造是因为它可以将恶意对象包装成对JNDI的引用，使得在JNDI查找时，恶意对象的类加载器被触发，从而实现远程代码执行或其他攻击。
 
 ## 0x02 漏洞挖掘篇
 
@@ -74,12 +80,16 @@
 - fastjson
 - - [Fastjson 1.2.24反序列化漏洞分析 （CVE-2017-18349）](./poc/CVE-2017-18349.md)
 - shiro
+- - Apache Shiro rememberMe反序列化漏洞分析（Shiro-550）
+- - Apache Shiro Padding Oracle Attack漏洞分析（Shiro-721）
 - log4j
 - - [Apache Log4j 漏洞分析 （CVE-2021-45105）](./poc/CVE-2021-45105.md)
 
 
 #### Web容器&框架
 - struts2
+- -  Struts2远程代码执行（S2-016）
+- -  Struts2远程代码执行（S2-045）
 - Spring
 - - [Spring 框架漏洞相关合集](https://www.viewofthai.link/2023/01/18/spring-%E6%A1%86%E6%9E%B6%E6%BC%8F%E6%B4%9E%E7%9B%B8%E5%85%B3%E5%90%88%E9%9B%86/)
 - -  [SpringBoot框架SPEL注入漏洞分析(CNVD-2016-04742)](./poc/CNVD-2016-04742.md)

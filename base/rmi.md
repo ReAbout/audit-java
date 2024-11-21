@@ -15,14 +15,17 @@ RMI一般指的是编程接口，也有时候同时包括JRMP和API（应用程�
 - [Java RMI原理及反序列化学习
 ](https://y4er.com/posts/java-rmi/)
 
-## 0x02 危险函数
+## 0x02 代码示例
 
 
-
-### 客户端
+### 危险函数
 
 `java.rmi.registry.LocateRegistry.getRegistry()`
 `java.rmi.Naming.lookup()`
+
+### 客户端
+
+
 
 ```java
 package com.test.rmi;
