@@ -57,7 +57,17 @@
 
 - [不安全的文件上传-待整理](./vul/upload.md)
 
-### 4. 不安全的组件
+### 4. 不一致性解析
+
+- [URL解析的不一致性](./vul/inconsistency-url.md)
+- 前后端的不一致性
+>经典系列漏洞F5 BIG-IP设备认证绕过
+- - F5 BIG-IP认证绕过（CVE-2020-5902）
+- - F5 BIG-IP认证绕过（CVE-2021-22986）
+- - F5 BIG-IP认证绕过（CVE-2022-1388）
+- - F5 BIG-IP认证绕过（CVE-2023-46747）
+
+### 5. 不安全的组件
 
 #### 组件
 
@@ -91,3 +101,9 @@
 ](https://github.com/facebook/mariana-trench)
 >TABBY使用静态分析框架 Soot 作为语义提取工具，将JAR/WAR/CLASS文件转化为代码属性图。 并使用 Neo4j 图数据库来存储生成的代码属性图CPG。
 - [[Tool] tabby](https://github.com/wh1t3p1g/tabby)
+
+
+
+## Other
+
+- [在线markdown表格生成器](https://tableconvert.com/zh-cn/markdown-generator)
